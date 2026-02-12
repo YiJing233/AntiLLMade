@@ -1,9 +1,11 @@
 from datetime import datetime
 from typing import Any, Dict, List, Optional
+import os
 
 import feedparser
 from dateutil import parser as date_parser
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from storage import (
@@ -21,6 +23,20 @@ from storage import (
 from summarizer import summarize_text
 
 app = FastAPI(title="AI RSS Digest")
+
+# CORS 配置 - 允许 Vercel 前端访问
+ALLOWED_ORIGINS = [
+    "https://anti-llmade-digest.vercel.app",
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class SourceCreate(BaseModel):
@@ -55,6 +71,16 @@ def startup() -> None:
 @app.get("/health")
 def health() -> Dict[str, str]:
     return {"status": "ok"}
+
+
+@app.get("/")
+def root() -> Dict[str, str]:
+    return {
+        "status": "ok",
+        "message": "AntiLLMade RSS API",
+        "docs": "/docs",
+        "version": "0.1.0",
+    }
 
 
 @app.get("/sources")

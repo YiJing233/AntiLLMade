@@ -1,0 +1,19 @@
+{
+  "$schema": "https://railway.app/schema.json",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+    "healthcheckPath": "/health",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 5
+  },
+  "routes": [
+    {
+      "path": "/*",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "handler": "main:app"
+    }
+  ]
+}

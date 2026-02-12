@@ -3,8 +3,13 @@ from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Iterable, List
+import os
 
-DB_PATH = "./rss_app.db"
+# Railway 持久化存储
+if os.getenv("RAILWAY_VOLUME_MOUNT_PATH"):
+    DB_PATH = os.path.join(os.getenv("RAILWAY_VOLUME_MOUNT_PATH"), "rss_app.db")
+else:
+    DB_PATH = "./rss_app.db"
 
 
 @dataclass
