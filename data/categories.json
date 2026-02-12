@@ -1,0 +1,154 @@
+{
+  "顶层": [
+    {
+      "url": "https://weekly.tw93.fun/rss.xml",
+      "title": "潮流周刊"
+    },
+    {
+      "url": "https://justlovemaki.github.io/CloudFlare-AI-Insight-Daily/rss.xml",
+      "title": "AI洞察日报 RSS Feed"
+    },
+    {
+      "url": "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml",
+      "title": "JavaScript Weekly"
+    },
+    {
+      "url": "https://www.latent.space/feed",
+      "title": "Latent.Space"
+    },
+    {
+      "url": "https://www.nazha.co/rss.xml",
+      "title": "nazha's blog"
+    }
+  ],
+  "派大星GPY‘s RSS 推荐": [
+    {
+      "url": "https://feeds.feedburner.com/ruanyifeng",
+      "title": "阮一峰的网络日志"
+    },
+    {
+      "url": "https://www.appinn.com/feed/",
+      "title": "小众软件"
+    },
+    {
+      "url": "https://www.allthingsdistributed.com/atom.xml",
+      "title": "All Things Distributed"
+    },
+    {
+      "url": "https://planetscale.com/blog/rss.xml",
+      "title": "Blog — PlanetScale"
+    },
+    {
+      "url": "https://coinsights.substack.com/feed",
+      "title": "Coinsights"
+    },
+    {
+      "url": "https://blog.polybdenum.com/feed.xml",
+      "title": "Considerations on Codecrafting"
+    },
+    {
+      "url": "https://feeds.alitu.com/30442616",
+      "title": "Creator Craft: Tools, Mindset and Workflows for Content Creators"
+    },
+    {
+      "url": "https://www.ssp.sh/index.xml",
+      "title": "Data Engineering Blog"
+    },
+    {
+      "url": "https://distributed-computing-musings.com/feed/",
+      "title": "Distributed Computing Musings"
+    },
+    {
+      "url": "http://feeds2.feedburner.com/ElegantCode",
+      "title": "Elegant Code"
+    },
+    {
+      "url": "https://engineering.fb.com/feed/",
+      "title": "Engineering at Meta"
+    },
+    {
+      "url": "https://engineering.grab.com/feed.xml",
+      "title": "Grab Tech"
+    },
+    {
+      "url": "https://darkcoding.net/index.xml",
+      "title": "Graham King"
+    },
+    {
+      "url": "http://blog.ionelmc.ro/feeds/all.atom.xml",
+      "title": "ionel's codelog"
+    },
+    {
+      "url": "https://julian.digital/feed/",
+      "title": "julian.digital"
+    },
+    {
+      "url": "https://linear.app/rss/blog.xml",
+      "title": "Linear Blog"
+    },
+    {
+      "url": "https://lukaspetersson.com/feed.xml",
+      "title": "Lukas Petersson’s blog"
+    },
+    {
+      "url": "https://notes.eatonphil.com/rss.xml",
+      "title": "Notes on software development"
+    },
+    {
+      "url": "https://www.pankajtanwar.in/feed.xml",
+      "title": "Pankaj Tanwar - CS Engineer, writer & creator."
+    },
+    {
+      "url": "https://pythoncat.substack.com/feed",
+      "title": "Python潮流周刊"
+    },
+    {
+      "url": "https://blog.readwise.io/rss/",
+      "title": "Readwise Blog"
+    },
+    {
+      "url": "https://www.blogger.com/feeds/2447174102813539049/posts/default",
+      "title": "Room 101"
+    },
+    {
+      "url": "http://feeds.feedburner.com/ScottHanselman",
+      "title": "Scott Hanselman's Blog"
+    },
+    {
+      "url": "https://semianalysis.com/feed/",
+      "title": "SemiAnalysis"
+    },
+    {
+      "url": "https://til.simonwillison.net/tils/feed.atom",
+      "title": "Simon Willison TIL"
+    },
+    {
+      "url": "https://engineering.atspotify.com/feed",
+      "title": "Spotify Engineering"
+    },
+    {
+      "url": "https://blog.cloudflare.com/rss/",
+      "title": "The Cloudflare Blog"
+    },
+    {
+      "url": "https://tesserato.web.app/rss.xml",
+      "title": "The Fortnightly Tambourine"
+    },
+    {
+      "url": "https://the-guild.dev/feed.xml",
+      "title": "The Guild Blog"
+    },
+    {
+      "url": "https://github.blog/engineering.atom",
+      "title": "The latest from GitHub's engineering team - The GitHub Blog"
+    },
+    {
+      "url": "https://www.blogger.com/feeds/6104420435021904082/posts/default?redirect=false",
+      "title": "The Programmer's Paradox"
+    },
+    {
+      "url": "https://toggl.com/blog/feed",
+      "title": "Toggl Blog"
+    }
+  ]
+}
