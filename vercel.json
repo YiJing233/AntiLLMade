@@ -2,13 +2,14 @@
   "framework": "vite",
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
+  "regions": ["iad1"],
   "env": {
-    "VITE_API_BASE": "https://your-api-domain.com"
+    "VITE_API_BASE": "@api-base-url"
   },
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://your-api-domain.com/:path*"
+      "destination": "https://antillmade-production.up.railway.app/:path*"
     }
   ]
 }
