@@ -66,3 +66,45 @@ export RSS_API_BASE="http://localhost:8000"
 
 - 摘要优先使用 `OPENAI_API_KEY`，未配置时回退为文本截取。
 - 日报按 `category` 进行分组展示。
+
+## 测试
+
+### Frontend Unit Tests (Vitest + React Testing Library)
+
+```bash
+cd frontend
+npm install
+npm run test
+npm run test:coverage
+```
+
+覆盖率阈值在 `frontend/vitest.config.js` 中设置为 80%。
+
+### Backend Integration Tests (pytest)
+
+```bash
+python -m pip install -r backend/requirements.txt
+python -m pip install pytest pytest-cov
+pytest backend/test_api.py
+```
+
+全局 `pytest.ini` 将后端覆盖率阈值设置为 90%。
+
+### Frontend E2E Tests (Playwright)
+
+```bash
+python -m pip install playwright pytest
+python -m playwright install chromium
+npm --prefix frontend install
+pytest backend/test_e2e.py -m e2e -v
+```
+
+E2E 测试会自动启动本地 backend/frontend 服务并验证：导航、订阅源 CRUD、日报视图。
+
+## CI
+
+GitHub Actions 工作流位于 `.github/workflows/ci.yml`，包含三个 job：
+
+- `frontend`: ESLint + Vitest 覆盖率
+- `backend`: Ruff + pytest 集成测试覆盖率
+- `e2e`: Playwright 前端端到端测试
