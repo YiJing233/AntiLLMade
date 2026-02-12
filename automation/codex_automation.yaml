@@ -1,0 +1,13 @@
+version: 1
+name: ai-rss-digest
+schedules:
+  - name: daily-ingest
+    cron: "0 7 * * *"
+    timezone: "Asia/Shanghai"
+    run:
+      command: "curl -X POST http://localhost:8000/ingest"
+  - name: daily-digest-push
+    cron: "30 7 * * *"
+    timezone: "Asia/Shanghai"
+    run:
+      command: "python automation/push_openclaw.py"
