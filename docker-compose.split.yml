@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  # =====================================
+  # 原子服务 (迭代 1)
+  # =====================================
+
+  summary-service:
+    build: ./services/summary-service
+    container_name: antiLLMade-summary
+    ports:
+      - "8001:8001"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  source-service:
+    build: ./services/source-service
+    container_name: antiLLMade-source
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./services/source-service/data:/app/data
+    environment:
+      - SOURCE_DB_PATH=/app/data/sources.db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # =====================================
+  # 基础设施
+  # =====================================
+
+  redis:
+    image: redis:7-alpine
+    container_name: antiLLMade-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  # =====================================
+  # 现有 monolith (向后兼容)
+  # =====================================
+
+  backend:
+    build: ./backend
+    container_name: antiLLMade-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - RSS_API_BASE=http://backend:8000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - summary-service
+      - source-service
+
+  frontend:
+    build: ./frontend
+    container_name: antiLLMade-frontend
+    ports:
+      - "5173:5173"
+
+volumes:
+  redis-data:

@@ -1,0 +1,11 @@
+# Source Service 配置
+
+# 数据库配置
+SOURCE_DB_PATH: "./sources.db"
+
+# 服务器配置
+HOST: "0.0.0.0"
+PORT: 8002
+
+# 健康检查
+HEALTH_CHECK_INTERVAL: 30
