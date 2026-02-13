@@ -1,0 +1,14 @@
+# Scheduler Service 配置
+
+# 调度配置
+SCHEDULE_INTERVAL_MINUTES: 60
+
+# 任务端点
+INGEST_ENDPOINT: "http://localhost:8000/ingest"
+
+# 通知 Webhook (OpenClaw 等)
+NOTIFICATION_WEBHOOK: ""
+
+# 服务器配置
+HOST: "0.0.0.0"
+PORT: 8006

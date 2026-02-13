@@ -1,0 +1,15 @@
+# API Gateway 配置
+
+# 服务地址
+FRONTEND_URL: "http://localhost:5173"
+SOURCE_SERVICE_URL: "http://localhost:8002"
+RSS_SERVICE_URL: "http://localhost:8003"
+SUMMARY_SERVICE_URL: "http://localhost:8001"
+DIGEST_SERVICE_URL: "http://localhost:8004"
+DATA_SERVICE_URL: "http://localhost:8005"
+
+# Redis (限流)
+REDIS_URL: "redis://localhost:6379"
+
+# 服务器配置
+GATEWAY_PORT: 8000

@@ -1,0 +1,10 @@
+# Data Service 配置
+
+# PostgreSQL 连接
+DATABASE_URL: "postgresql://user:pass@localhost:5432/antillmade"
+POOL_SIZE: 10
+COMMAND_TIMEOUT: 60
+
+# 服务器配置
+HOST: "0.0.0.0"
+PORT: 8005

@@ -1,0 +1,8 @@
+# MCP Tool Service 配置
+
+# 网关地址
+GATEWAY_URL: "http://localhost:8000"
+
+# 服务器配置
+HOST: "0.0.0.0"
+PORT: 8007

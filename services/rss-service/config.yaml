@@ -1,0 +1,17 @@
+# RSS Service 配置
+
+# Redis 配置
+REDIS_URL: "redis://localhost:6379"
+STREAMS_KEY: "antiLLMade:events"
+
+# 外部服务
+SUMMARY_SERVICE_URL: "http://localhost:8001"
+SOURCE_SERVICE_URL: "http://localhost:8002"
+
+# 并发控制
+MAX_CONCURRENT: 5
+ENTRIES_PER_SOURCE: 20
+
+# 服务器配置
+HOST: "0.0.0.0"
+PORT: 8003
